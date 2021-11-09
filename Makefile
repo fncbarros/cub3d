@@ -11,9 +11,22 @@
 # **************************************************************************** #
 
 NAME = cub3d
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror -lm
+INC = inc/
+FW = -framework AppKit -framework OpenGL
+OBJ = $(SRC:c=o)
+LIBFT = libft.a
+
+%.o: %.c
+	$(CC) $(CFLAGS) -Imlx $< -o $@
 
 all: $(NAME)
+
+$(NAME): $(OBJ) $(LIBFT)
+	$(CC) $(CFLAGS) $(OBJ) 
+
+$(LIBFT):
 
 clean: 
 	rm $(OBJ)
