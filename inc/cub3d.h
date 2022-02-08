@@ -18,6 +18,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <error.h> // ??
+# include <errno.h> // ...
+# include <string.h>
 # include <mlx.h>
 # include "libft.h"
 # include "get_next_line.h"
